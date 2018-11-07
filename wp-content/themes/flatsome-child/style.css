@@ -1,0 +1,804 @@
+/*
+Theme Name: Flatsome Child
+Description: This is a child theme for Flatsome Theme
+Author: UX Themes
+Template: flatsome
+Version: 3.0
+*/
+
+/*************** ADD CUSTOM CSS HERE.   ***************/
+h3#ttdv {
+    color: #ff5722;
+}
+h3#ttdv:before {
+    content: "\f129";
+    font-family: FontAwesome;
+    padding-right: 5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+h3#hdsd:before {
+    content: "\f29c";
+    font-size: 20px;
+    font-family: FontAwesome;
+    padding-right: 5px;
+    font-weight: 400;
+}
+h3#hdsd {
+    color: #ff5722;
+}
+.ttdv h4 {
+    color: #ff8f00;
+}
+.left-sp .col-inner, .wg-sticky  {
+    background: transparent !important;
+}
+
+.detail-pro {
+    background: white;
+    margin-top: 25px;
+}
+.grid-style-3 .title-wrapper {
+	min-width: 58% !important;
+}
+.f-contact li {
+	list-style: none;
+}
+.footer .is-divider.small {
+    display: none;
+}
+.cft ul.menu>li+li,.cft .widget>ul>li+li {
+	border-top: none;
+}
+#related_posts .col {
+  float: left;
+  margin-left: 0 !important;
+  list-style: none;
+}
+.relatedcontent h3 {
+  font-size: 14px;
+  margin-top: 7px;
+}
+.relatedthumb img {
+  height: 100%;
+  max-height: 165px;
+}
+#related_posts {
+  border-top: 4px double #e8e8e8;
+  padding-top: 10px;
+}
+#related_posts li:nth-child(1) {
+  padding-left: 0 !important;
+}
+#related_posts li:nth-child(2) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+#related_posts li:nth-child(3) {
+  padding-right: 0 !important;
+}
+.relatedthumb img {
+  min-height: 165px;
+}
+.blog-share.text-center {
+    text-align: left;
+    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid #e8e8e8;
+    padding: 5px;
+}
+.blog-share .is-divider {
+    display: none;
+}
+.blog-share a {
+	margin-bottom: 0;
+}
+.blog-share:before {
+    content: "Chia sẻ";
+    padding-right: 15px;
+}
+.blog-single .entry-divider.is-divider.small {
+    display: none;
+}
+.blog-single header.entry-header .entry-header-text.entry-header-text-top.text-right {
+    text-align: left !important;
+}
+input[type='search'] {
+	font-size: 15px;
+}
+.post-item .box-text.text-left {
+    vertical-align: top;
+}
+.blog-wrapper.blog-archive.page-wrapper .post-item .box-image {
+    width: 35% !important;
+}
+.badge {
+	display: none;
+}
+
+.footer-2 {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+div#custom_html-5 {
+    margin-bottom: 0;
+}
+.dkkm .col {
+    padding-bottom: 5px;
+}
+.mc4wp-form-fields input[type="email"] {
+    width: 70%;
+	height: 41px;
+}
+.mc4wp-form-fields input[type="submit"] {
+    height: 42px;
+    background: #ff5722 !important;
+}
+.footer p, .footer a {
+	font-size: 12px;
+}
+.woocommerce-info.message-wrapper {display: none;}
+.woof_list label {
+	display: inline !important;
+}
+.medium-flex-wrap .flex-col {flex-grow: 1;}
+.custom-tour .price-wrapper {
+    display: none;
+}
+.custom-tour .box-text {
+	padding: 0 10px;
+}
+.custom-tour .product-small {
+    padding: 5px 0;
+}
+
+.woocommerce-billing-fields {
+	border-top: none;
+	padding-top: 0;
+}
+#order_review th.product-total {
+    width: 25%;
+}
+abbr.required {
+    color: red !important;
+}
+span.optional, .woocommerce-form-coupon-toggle {
+    display: none;
+}
+.ui-datepicker-title select {
+    float: left;
+}
+table.shop_table.woocommerce-cart-form__contents, .cart-collaterals {
+    background: white;
+    padding: 20px !important;
+    border-radius: 5px;
+    box-shadow: 1px 2px rgba(197, 197, 197, 0.4);
+}
+.cart-collaterals {
+    max-height: 330px;
+}
+.order-total td span, .order-total th {
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+}
+.breadcrumbs {
+    text-transform: none;
+    font-weight: 400;
+}
+.woof_list input[type='checkbox'], .woof_list input[type='radio'] {
+	display: none;
+}
+.post-sidebar.large-3.col {
+    padding: 0 15px;
+}
+aside#woof_widget-3 {
+    background: white;
+    padding: 15px 10px;
+    box-shadow: 1px 2px #e8e8e8;
+    border: 1px solid #e8e8e8;
+}
+aside#woocommerce_product_search-2 {
+    padding: 10px 15px !important;
+}
+.woof_products_top_panel {
+    display: none !important;
+}
+.featured-title {
+    background: url(/wp-content/uploads/2018/05/tham-quan-nui-phu-si-mot-ngay.jpg);
+    background-size: cover;
+}
+.chosen-container {
+	padding: 0 10px;
+}
+.no-booking {
+    background: white;
+    padding: 30px 15px 5px 15px;
+    border: 1px solid #e8e8e8;
+    box-shadow: 1px 2px rgba(232, 232, 232, 0.42);
+}
+.woof_list.woof_list_radio li:hover, .woof_list.woof_list_radio li:active {
+    background: whitesmoke;
+ 
+}
+.woof_list.woof_list_radio li {
+	padding: 0 10px !important;
+}
+.woof_radio_term_reset_visible, form.woocommerce-ordering, p.woocommerce-result-count.hide-for-medium {display: none !important;}
+#shop-sidebar aside {
+    background: white;
+    padding: 15px 0px 5px 0px;
+	margin-bottom: 0 !important;
+}
+#shop-sidebar input[type='checkbox'], #shop-sidebar input[type='radio'] {
+	display: none;
+}
+.woof_list label {
+    padding-top: 5px;
+    font-weight: 400;
+    margin-bottom: 0;
+	padding-bottom: 5px;
+}
+.woof_list li:before {
+	text-align: center;
+	display: inline-table;
+    min-width: 22px;
+	font-family: FontAwesome;
+}
+li.woof_term_23:before {
+    content: '\f0f5';
+}
+li.woof_term_21:before {
+    content: '\f03d';
+}
+li.woof_term_22:before {
+    content: '\f2c5';
+}
+li.woof_term_24:before {
+    content: '\f239';
+}
+li.woof_term_20:before {
+    content: '\f145';  
+}
+.woof_submit_search_form_container {
+	display: none;
+}
+.widget.widget-woof, .woof_container {
+    margin-bottom: 0 !important;
+}
+#wrapper, #main {
+    background-color: #f5f5f5;
+}
+.custom-product-page, ul.sidebar-wrapper {
+	background: whitesmoke;
+}
+.bread-col {
+    padding-bottom: 0 !important;
+}
+.content-all {
+    margin-top: 10px !important;
+}
+.related .product-small .col-inner {
+    background: white;
+    padding: 5px;
+	box-shadow: 1px 2px rgba(232, 232, 232, 0.8);
+}
+.related .box-text {
+    padding: 15px 15px 0 15px;
+}
+.detail-pro .col-inner {
+    padding: 20px 20px 0 20px;
+}
+.product-breadcrumb-container {
+    background: whitesmoke;
+}
+.custom-product-page {
+    background: #f5f5f5;
+}
+.anh-feature {
+    text-align: center;
+    background: gray;
+    max-height: 450px;
+}
+.anh-feature img {
+    max-height: 450px;
+	width: auto;
+}
+.flex-row.header-main.container.product-menu {
+    height: auto !important;
+}
+ul#menu-product-menu li {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    border-top: none;
+}
+ul#menu-product-menu {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@font-face {
+    font-family: bungbu;
+	font-weight: 400;
+    src: url(/wp-content/themes/flatsome-child/fonts/bungnho.ttf);
+}
+@font-face {
+    font-family: bungbu;
+	font-weight: bold;
+    src: url(/wp-content/themes/flatsome-child/fonts/bungbu.ttf);
+}
+
+h1.product-title.entry-title {
+	font-family: 'Markazi Text', serif;
+}
+body{
+	font-family:  "Roboto", sans-serif !important;
+}
+h1,h2,h3,h4,h5,h6, .heading-font, .nav > li > a{
+	font-family: bungbu !important;
+}
+.custom-product-page p, .custom-product-page li {
+    font-size: 14px !important;
+    text-align: justify;
+    font-family: "Roboto", sans-serif;
+}
+.wc-bookings-booking-form {
+	padding: 20px 20px 10px 20px;
+	background: white;
+}
+button.wc-bookings-booking-form-button {
+    opacity: 1 !important;
+    background: #ff5722 !important;
+}
+p.name.product-title {
+    line-height: 1.5;
+    margin-bottom: 5px;
+    font-size: 14px;
+	min-height: 40px;
+}
+.product-small.box .price-wrapper .price  {
+	font-size: 18px;
+}
+span.amount, .cprice {
+	color: red !important;
+	font-weight: 400;
+}
+.cprice {
+    text-align: center;
+	    margin-top: 8px !important;
+}
+ul.sidebar-wrapper {
+	width: 100%;
+	margin: auto;
+	max-width: 370px;
+}
+.top-product>.col {
+    margin: auto;
+    width: 100%;
+}
+
+.product-images {
+    margin-bottom: -1px;
+}
+
+.top-info .col:before {
+    content: '\f006';
+    font-family: FontAwesome;
+    padding-right: 5px;
+}
+.top-info .col {
+    float: left;
+    padding: 5px 0;
+	font-size: 14px;
+}
+input.wc-bookings-date-picker-choose-date {
+    box-shadow: none;
+    border-radius: 5px;
+}
+dl dt, dl dd {
+    margin: 0 5px 5px 0;
+}
+dd,dt {
+    width: auto;
+}
+.woocommerce-mini-cart dd, .woocommerce-mini-cart dt {
+	width: 40%;
+}
+.cart-collaterals {
+    float: right !important;
+    margin-left: auto;
+}
+.continue-shopping {
+	float: right !important;
+}
+.cart-collaterals {
+    border: none !important;
+}
+button[name="update_cart"] {
+    float: right;
+}
+.cnum input[type=number]::-webkit-inner-spin-button, 
+.cnum input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+.dec.button, .inc.button {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 30px;
+    padding: 0;
+    background: white;
+    color: black;
+    border: 1px solid #e8e8e8;
+}
+.dec.button {
+    left: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.inc.button {
+    right: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.wc-bookings-booking-form .form-field input[type='number'] {
+    box-shadow: none;
+    border-radius: 5px;
+}
+.cnum .button:hover {
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.05);
+}
+.col.medium-4.cprice {
+    padding-top: 5px !important;
+}
+p#billing_last_name_field {
+    width: 100%;
+}
+.checkout-sidebar dl dd {
+	width: 46%;
+	padding: 5px 0;
+}
+.checkout-sidebar dl dt {
+    display: block !important;
+    width: 50% !important;
+    float: left;
+	padding: 5px 0;
+}
+.wc-bookings-booking-form .wc-bookings-booking-cost {
+    background: transparent;
+    border-top: none;
+    position: relative;
+    margin: 0 -1em;
+    padding: 0 1em 10px 1em;
+	clear: both;
+}
+.person_type .col.medium-4 {
+    padding-bottom: 0;
+}
+div#wc-bookings-booking-form .col {
+    float: left;
+	padding: 0;
+	font-size: 14px;
+}
+legend {
+    padding-bottom: 0 !important;
+    margin: 0 !important;
+    margin-bottom: 10px !important;
+}
+.wc-bookings-booking-form .form-field input[type='number'] {
+    width: 100%;
+    margin-bottom: 0;
+	text-align: center;
+}
+.wc-bookings-booking-form fieldset input {
+    width: 100%;
+    margin-bottom: 0;
+}
+.person_type .col {
+	    padding: 10px 0 0px 0;
+}
+.giatien {
+	color: red;
+}
+.person_type {
+    text-align: left;
+	border-bottom: 1px solid #e8e8e8;
+}
+a.quocgia {
+    padding: 0 5px;
+    line-height: 2;
+}
+td a.location {
+    padding: 0 5px;
+    line-height: 2;
+}
+.live-search-results.text-left.z-top {
+    background: white;
+}
+.autocomplete-suggestion {
+	color: black;
+}
+.autocomplete-suggestion .search-price .amount {
+	color: #4d5024;
+}
+/* css trang chi tiết sản phẩm */
+.add-info {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 15px 0;
+}
+.ttdv, .hdsd, .chinhsach {
+    padding: 15px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+.cs-content-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+.h4, h4 {
+    font-size: 18px;
+	font-weight: 500;
+}
+.sp .icon-box {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+	color: #0ab596;
+}
+.sp .icon-box.about:before {
+    content: '\f030';
+    font-family: FontAwesome;
+    padding-right: 15px;
+}
+.sp .icon-box.feature:before {
+    content: '\f006';
+    font-family: FontAwesome;
+    padding-right: 15px;
+}
+.sp .icon-box.detail:before {
+    content: '\f15c';
+	font-family: FontAwesome;
+    padding-right: 15px;
+}
+.feature-content li, .detail-content li {
+    list-style: none;
+}
+.feature-content li:before, .detail-content li:before {
+    content: '\f00c';
+    font-family: FontAwesome;
+    padding-right: 10px;
+    color: #0ab596;
+}
+.detail-content li:before {
+	color: black;
+}
+.banggia {
+	margin-top: 15px;
+}
+.banggia .col-inner {
+    border: 1px solid #e8e8e8;
+    padding: 15px;
+	
+}
+.banggia table.vartable .vartable_selectall.button.btn {
+    display: none;
+}
+.banggia table.vartable td.globalcartcol {
+    display: none;
+}
+.banggia table.vartable td {
+    width: 20%;
+    text-align: center;
+    border-right: 1px solid #e8e8e8;
+}
+.banggia table.vartable th:first-child, .banggia td:first-child {
+    padding-left: 0;
+    border-left: 1px solid #e8e8e8;
+}
+.banggia table.vartable th {
+    border-top: 1px solid #e8e8e8;
+    border-right: 1px solid #e8e8e8;
+    text-align: center;
+}
+.banggia table.vartable th.vartable_globalcart {
+    display: none;
+}
+.banggia table.vartable tr th {
+    padding: 15px !important;
+}
+.banggia table.vartable input.qty {
+    text-align: center;
+}
+.banggia form.cart {
+    margin-bottom: 0;
+}
+.banggia button.single_add_to_cart_button.button.alt {
+    margin-bottom: 0;
+}
+.banggia span.gia {
+    display: inline-block;
+    width: 35%;
+    padding: 10px 20px;
+    text-align: right;
+}
+.banggia .product-price-container.is-large {
+    display: inline-block;
+}
+.banggia .price.product-page-price {
+    margin-bottom: 0;
+}
+.banggia .add-to-cart-container {
+    width: 50%;
+    display: inline-block;
+    text-align: left;
+}
+.related h3.product-section-title {
+    margin-left: 0;
+}
+.wc-bookings-booking-form .form-field input[type='number'] {
+    width: 100%;
+}
+div#checkgia {
+    text-align: center;
+}
+.wc-bookings-date-picker .ui-datepicker td.bookable a.ui-state-default {
+    background-color: transparent !important;
+    color: #0027ff!important;
+}
+.wc-bookings-date-picker .ui-datepicker td.bookable a.ui-state-default.ui-state-active {
+    background: #0092d5 !important;
+    color: white !important;
+}
+.wc-bookings-date-picker .ui-datepicker-header {
+    background-color: transparent !important;
+    background-image: none !important;
+    color: black;
+}
+.wc-bookings-date-picker .ui-datepicker .ui-datepicker-next, .wc-bookings-date-picker .ui-datepicker .ui-datepicker-prev {
+    background: transparent !important;
+}
+/* end css trang chi tiết sản phẩm */
+
+/* CSS cart + checkout page */
+
+td.product-name {
+	color: #000000;
+}
+td.product-name .variation {
+	color: #666;
+}
+
+.entry-content.single-page p {
+    text-align: justify;
+}
+.entry-image.relative, .entry-meta, .blog-share .is-divider  {
+    display: none;
+}
+.entry-content.single-page {
+    padding-top: 0;
+}
+.entry-header-text {
+    padding-bottom: 0;
+}
+.post-navigation {
+    border: 1px solid #e8e8e8;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.post-navigation ul {
+    margin-bottom: 0;
+}
+.post-navigation a {
+    color: #56ad00;
+}
+.blog-share {
+    float: left;
+}
+p#billing_address_1_field {
+    width: 100%;
+}
+.wc-bookings-booking-form label span {
+    font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+	.shop-container .box-text {
+		min-height: 95px;
+	}
+	.related .box-text {
+		min-height: 105px;
+	}
+	.entry-image-float {
+		max-width: 33%;
+	}
+}
+@media only screen and (max-width: 480px) {
+/*************** ADD MOBILE ONLY CSS HERE  ***************/
+	.anh-feature {
+		height: 175px !important;
+	}
+dt {
+    width: 55%;
+}
+td.product-name {
+    padding-left: 35px !important;
+}
+td.product-thumbnail {
+    padding: 0 !important;
+    width: 0 !important;
+    min-width: 0;
+}
+td.product-thumbnail img {
+    display: none;
+}
+.col.small-4.cprice {
+    float: right;
+    text-align: center;
+    padding-top: 5px !important;
+}
+	ul.sidebar-wrapper {
+		max-width: 340px;
+	}
+}
+/* CSS PRODUCT MENU */
+.flex-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.product-menu ul{
+    margin: 0.6em 0;
+}
+.product-menu.hide{
+    display: none;
+}
+.header:not(.transparent) .product-menu ul li a {
+    color: black;
+}
+/*************** STICKY WIDGET CSS   ***************/
+.menu-sticky {
+    position: fixed;
+}
+.menu-normal{
+    position: relative;
+    top: 0px;
+}
+.wg-normal {
+	width: 100%;
+	position: relative;
+	top: 0px;
+	-webkit-transition: position 0.5s cubic-bezier(0, 0, 0.2, 1),top 0.5s cubic-bezier(0, 0, 0.2, 1);
+    -moz-transition: position 0.5s cubic-bezier(0, 0, 0.2, 1),top 0.5s cubic-bezier(0, 0, 0.2, 1);
+    -o-transition: position 0.5s cubic-bezier(0, 0, 0.2, 1),top 0.5s cubic-bezier(0, 0, 0.2, 1);
+    transition: position 0.5s cubic-bezier(0, 0, 0.2, 1),top 0.5s cubic-bezier(0, 0, 0.2, 1);
+}
+.wg-sticky {
+	position: fixed !important;
+	top: 70px !important;
+	-webkit-transition: position 2s cubic-bezier(0, 0, 0.2, 1),top 2s cubic-bezier(0, 0, 0.2, 1);
+    -moz-transition: position 2s cubic-bezier(0, 0, 0.2, 1),top 2s cubic-bezier(0, 0, 0.2, 1);
+    -o-transition: position 2s cubic-bezier(0, 0, 0.2, 1),top 2s cubic-bezier(0, 0, 0.2, 1);
+    transition: position 2s cubic-bezier(0, 0, 0.2, 1),top 2s cubic-bezier(0, 0, 0.2, 1);
+}
+.wg-end {
+	position: absolute;
+	bottom: 0px;
+	-webkit-transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+    -moz-transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+    -o-transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+    transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+}
+.wg-end1 {
+	position: absolute;
+	bottom: 93px;
+	-webkit-transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+    -moz-transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+    -o-transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+    transition: position 2s cubic-bezier(0, 0, 0.2, 1),bottom 2s cubic-bezier(0, 0, 0.2, 1);
+}
+/*************** NAV CSS   ***************/
+.nav-pagination>li>span, .nav-pagination>li>a {
+    border-radius: 0px;
+}
+
+.price-wrapper {
+    text-align: right;
+}
