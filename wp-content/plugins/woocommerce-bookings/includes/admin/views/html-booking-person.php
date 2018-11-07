@@ -51,6 +51,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<?php do_action( 'woocommerce_bookings_after_person_max_column', $person_type->get_id() ); ?>
 			</tr>
+			<!-- Customize add more some fields from Klook -->
+			<tr>
+				<td>
+					<label>Market Price:</label>
+					<!-- exchange_rate_vnd * person_klook_market_price -->
+					<input type="number" name="person_klook_market_price[<?php echo $loop; ?>]" readonly value="" />
+				</td>
+				<td>
+					<label>Price:</label>
+					<input type="number" name="person_klook_price[<?php echo $loop; ?>]" readonly value="" />
+				</td>
+				<td>
+					<label>Name:</label>
+					<input type="number" name="person_klook_name[<?php echo $loop; ?>]" readonly value="" />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Tiền lời:</label>
+					<input type="number" name="person_profit[<?php echo $loop; ?>]" value="" />
+				</td>
+			</tr>
+			<!-- The End -->
 		</tbody>
 	</table>
 </div>

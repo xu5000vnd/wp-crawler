@@ -488,3 +488,28 @@ function ttv_sanitize_file_name( $filename ) {
     return $sanitized_filename;
 }
 add_filter( 'sanitize_file_name', 'ttv_sanitize_file_name', 10, 1 );
+
+/*
+ * Add Option field exchange_rate_vnd
+*/
+function addExchangeRate() {
+    $option = get_option('exchange_rate_vnd');
+    if(!$option) {
+        register_setting(
+            'general',
+            'exchange_rate_vnd', 
+            [
+                'show_in_rest' => ['name'=>'title'],
+                'type' => 'number',
+                'description' => 'Tỷ Giá VND'
+            ]
+        );
+
+        $option = get_option('exchange_rate_vnd');
+    }
+
+    add_settings_field($option->option_id, 'Tỷ giá VND');
+}
+
+
+
