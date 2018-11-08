@@ -62,6 +62,14 @@ class WC_Product_Booking_Person_Type_Data_Store_CPT extends WC_Data_Store_WP {
 			'block_cost'  => get_post_meta( $person_type->get_id(), 'block_cost', true ),
 			'min'         => get_post_meta( $person_type->get_id(), 'min', true ),
 			'max'         => get_post_meta( $person_type->get_id(), 'max', true ),
+			'klook_market_price' => get_post_meta( $person_type->get_id(), 'klook_market_price', true ),
+			'klook_price'        => get_post_meta( $person_type->get_id(), 'klook_price', true ),
+			'klook_name'         => get_post_meta( $person_type->get_id(), 'klook_name', true ),
+			'profit'             => get_post_meta( $person_type->get_id(), 'profit', true ),
+			// 'klook_market_price' => '1234',
+			// 'klook_price'        => '12345',
+			// 'klook_name'         => '123456',
+			// 'profit'             => '50000'
 		) );
 		$person_type->set_object_read( true );
 	}

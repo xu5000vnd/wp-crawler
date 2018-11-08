@@ -29,6 +29,10 @@ class WC_Product_Booking_Person_Type extends WC_Bookings_Data {
 		'name'        => '',
 		'parent_id'   => 0,
 		'sort_order'  => 0,
+		'klook_market_price'  => 0,
+		'klook_price'  => 0,
+		'klook_name'  => '',
+		'profit'  => 0
 	);
 
 	/**
@@ -259,5 +263,86 @@ class WC_Product_Booking_Person_Type extends WC_Bookings_Data {
 	 */
 	public function set_sort_order( $value ) {
 		$this->set_prop( 'sort_order', $value );
+	}
+
+	/*======Add functions get/set for customize fields======*/
+	/**
+	 * Get klook_market_price.
+	 *
+	 * @param  string $context
+	 * @return int
+	 */
+	public function get_klook_market_price( $context = 'view' ) {
+		return $this->get_prop( 'klook_market_price', $context );
+	}
+
+	/**
+	 * Set klook_market_price.
+	 *
+	 * @param  string $value
+	 * @return int
+	 */
+	public function set_klook_market_price( $value ) {
+		return $this->set_prop( 'klook_market_price', $value );
+	}
+
+	/**
+	 * Get klook_price.
+	 *
+	 * @param  string $context
+	 * @return int
+	 */
+	public function get_klook_price( $context = 'view' ) {
+		return $this->get_prop( 'klook_price', $context );
+	}
+
+	/**
+	 * Set klook_price.
+	 *
+	 * @param  string $value
+	 * @return int
+	 */
+	public function set_klook_price( $value ) {
+		return $this->set_prop( 'klook_price', $value );
+	}
+
+	/**
+	 * Get klook_name.
+	 *
+	 * @param  string $context
+	 * @return int
+	 */
+	public function get_klook_name( $context = 'view' ) {
+		return $this->get_prop( 'klook_name', $context );
+	}
+
+	/**
+	 * Set klook_name.
+	 *
+	 * @param  string $value
+	 * @return int
+	 */
+	public function set_klook_name( $value ) {
+		return $this->set_prop( 'klook_name', $value );
+	}
+
+	/**
+	 * Get profit.
+	 *
+	 * @param  string $context
+	 * @return int
+	 */
+	public function get_profit( $context = 'view' ) {
+		return $this->get_prop( 'profit', $context );
+	}
+
+	/**
+	 * Set profit.
+	 *
+	 * @param  string $value
+	 * @return int
+	 */
+	public function set_profit( $value ) {
+		return $this->set_prop( 'profit', $value );
 	}
 }

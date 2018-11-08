@@ -208,6 +208,13 @@ class WC_Bookings_Admin {
 			$person_description = $_POST['person_description'];
 			$person_min         = $_POST['person_min'];
 			$person_max         = $_POST['person_max'];
+
+			//add more field customize
+			$person_klook_market_price = $_POST['person_klook_market_price'];
+			$person_klook_price = $_POST['person_klook_price'];
+			$person_klook_name = $_POST['person_klook_name'];
+			$person_profit = $_POST['person_profit'];
+
 			$max_loop           = max( array_keys( $_POST['person_id'] ) );
 
 			for ( $i = 0; $i <= $max_loop; $i ++ ) {
@@ -225,6 +232,10 @@ class WC_Bookings_Admin {
 					'min'         => wc_clean( $person_min[ $i ] ),
 					'max'         => wc_clean( $person_max[ $i ] ),
 					'parent_id'   => $product->get_id(),
+					'klook_market_price' => wc_clean( $person_klook_market_price[ $i ] ),
+					'klook_price'        => wc_clean( $person_klook_price[ $i ] ),
+					'klook_name'         => wc_clean( $person_klook_name[ $i ] ),
+					'profit'             => wc_clean( $person_profit[ $i ] ),
 				) );
 				$person_types[] = $person_type;
 			}

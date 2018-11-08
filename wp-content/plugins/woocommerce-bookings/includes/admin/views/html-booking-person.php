@@ -54,23 +54,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<!-- Customize add more some fields from Klook -->
 			<tr>
 				<td>
-					<label>Market Price:</label>
+					<label>Klook Market Price:</label>
 					<!-- exchange_rate_vnd * person_klook_market_price -->
-					<input type="number" name="person_klook_market_price[<?php echo $loop; ?>]" readonly value="" />
+					<?php //echo get_option('exchange_rate_vnd'); ?>
+					<input type="number" name="person_klook_market_price[<?php echo $loop; ?>]" value="<?php echo esc_attr( $person_type->get_klook_market_price('edit' ) ); ?>" />
 				</td>
 				<td>
-					<label>Price:</label>
-					<input type="number" name="person_klook_price[<?php echo $loop; ?>]" readonly value="" />
+					<label>Klook Price:</label>
+					<input type="number" name="person_klook_price[<?php echo $loop; ?>]" value="<?php echo esc_attr( $person_type->get_klook_price('edit' ) ); ?>" />
 				</td>
 				<td>
-					<label>Name:</label>
-					<input type="number" name="person_klook_name[<?php echo $loop; ?>]" readonly value="" />
+					<label>Klook Name:</label>
+					<input type="text" name="person_klook_name[<?php echo $loop; ?>]" value="<?php echo esc_attr( $person_type->get_klook_name('edit' ) ); ?>" />
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<label>Tiền lời:</label>
-					<input type="number" name="person_profit[<?php echo $loop; ?>]" value="" />
+					<input type="number" name="person_profit[<?php echo $loop; ?>]" value="<?php echo esc_attr( $person_type->get_profit('edit' ) ); ?>" />
 				</td>
 			</tr>
 			<!-- The End -->
