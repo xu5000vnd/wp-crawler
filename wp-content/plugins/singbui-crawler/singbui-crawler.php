@@ -28,6 +28,7 @@ function cb_crawler_klook(){
           </tr>
         </table>
         <?php submit_button(); ?>
+        <?php do_settings_sections('klook_show_data_page'); ?>
       </form>
   </div>
 <?php
@@ -36,4 +37,21 @@ function cb_crawler_klook(){
 add_action('admin_init', 'crawler_klook_setting');
 function crawler_klook_setting() {
   register_setting('exchange_rate_vnd','exchange_rate_vnd');
+
+  //add_settings_section($id, $title, $callback, $page)
+  add_settings_section('klook_show_data_section', 'Show Prices','handle_klook_show_data', 'klook_show_data_page');
+
+  // add_settings_field( $id, $title, $callback, $page, $section, $arg)
+  add_settings_field('klook_show_data_script','', 'klook_show_data_load_js','klook_show_data_page', 'klook_show_data_section', array('name'=>'script') );
+}
+
+function handle_klook_show_data() {
+  wp_enqueue_script( 'klook_script', plugins_url( '/plugin.js', __FILE__ ), array('jquery'), '', true );
+}
+
+function klook_show_data_load_js($args) {
+  extract($args);
+  if($name === 'script') {
+    echo "<div id='klook-load-data'></div>";
+  }
 }
