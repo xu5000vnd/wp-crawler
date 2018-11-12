@@ -28,8 +28,10 @@ function cb_crawler_klook(){
           </tr>
         </table>
         <?php submit_button(); ?>
-        <?php do_settings_sections('klook_show_data_page'); ?>
       </form>
+      <?php do_settings_sections('klook_show_data_page'); ?>
+      <div id="crawler-main">        
+      </div>
   </div>
 <?php
 }
@@ -46,7 +48,7 @@ function crawler_klook_setting() {
 }
 
 function handle_klook_show_data() {
-  wp_enqueue_script( 'klook_script', plugins_url( '/plugin.js', __FILE__ ), array('jquery'), '', true );
+  //wp_enqueue_script( 'klook_script', plugins_url( '/loadata.js', __FILE__ ), array('jquery'), '', true );
 }
 
 function klook_show_data_load_js($args) {
@@ -54,4 +56,9 @@ function klook_show_data_load_js($args) {
   if($name === 'script') {
     echo "<div id='klook-load-data'></div>";
   }
+}
+
+add_action('admin_init', 'loadJs');
+function loadJs() {
+  wp_enqueue_script( 'loadJs', plugins_url( '/plugin.js', __FILE__ ), array('jquery'), '', true );
 }
