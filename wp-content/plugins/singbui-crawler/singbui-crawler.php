@@ -29,8 +29,7 @@ function cb_crawler_klook(){
         </table>
         <?php submit_button(); ?>
       </form>
-      <?php do_settings_sections('klook_show_data_page'); ?>
-      <div id="crawler-main">        
+      <?php //do_settings_sections('klook_show_data_page'); ?>
       </div>
   </div>
 <?php
@@ -44,21 +43,33 @@ function crawler_klook_setting() {
   add_settings_section('klook_show_data_section', 'Show Prices','handle_klook_show_data', 'klook_show_data_page');
 
   // add_settings_field( $id, $title, $callback, $page, $section, $arg)
-  add_settings_field('klook_show_data_script','', 'klook_show_data_load_js','klook_show_data_page', 'klook_show_data_section', array('name'=>'script') );
+  add_settings_field('klook_show_name','Name', 'klook_show_data_load_js','klook_show_data_page', 'klook_show_data_section', array('name'=>'name') );
+  add_settings_field('klook_show_link','Link', 'klook_show_data_load_js','klook_show_data_page', 'klook_show_data_section', array('name'=>'link') );
+  add_settings_field('klook_show_packages','Packages', 'klook_show_data_load_js','klook_show_data_page', 'klook_show_data_section', array('name'=>'packages') );
+  add_settings_field('klook_show_datetime','Date Time Crawl', 'klook_show_data_load_js','klook_show_data_page', 'klook_show_data_section', array('name'=>'datetime') );
 }
 
 function handle_klook_show_data() {
-  //wp_enqueue_script( 'klook_script', plugins_url( '/loadata.js', __FILE__ ), array('jquery'), '', true );
+  wp_enqueue_script( 'klook_script', plugins_url( '/loadprices.js', __FILE__ ), array('jquery'), '', true );
+  echo "<div id='exchange_rate' data-rate='".get_option('exchange_rate_vnd')."'>Exchange rate USD to VND : <strong style='font-size:16px'>" . get_option('exchange_rate_vnd') . "<strong/> VND</div>";
 }
 
 function klook_show_data_load_js($args) {
   extract($args);
-  if($name === 'script') {
-    echo "<div id='klook-load-data'></div>";
+  switch ($name) {
+    case 'name':
+      echo '<div id="klook_name"></div>';
+      break;
+    case 'link':
+      echo '<div id="klook_link"></div>';
+      break;
+    case 'packages':
+      echo '<div id="klook_packages"></div>';
+      break;
+    case 'datetime':
+      echo '<div id="klook_datetime"></div>';
+      break;
+    default:
+      break;
   }
-}
-
-add_action('admin_init', 'loadJs');
-function loadJs() {
-  wp_enqueue_script( 'loadJs', plugins_url( '/plugin.js', __FILE__ ), array('jquery'), '', true );
 }
