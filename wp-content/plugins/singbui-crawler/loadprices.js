@@ -35,25 +35,27 @@ function getUrlParameter(sParam) {
         for (var i = 0; i < activity.packages.length; i++) {
           var pack = activity.packages[i];
           packages += `
-            <div>
-              <h4>Package Name: <b>${pack.packageName}</b></h4>
+            <div class="klook-package">
+              <h4>Package Name: <b>${pack.packageName}</b> <button type="button" class="btn-show">Show</button></h4>
               <h4>Date: ${pack.date}</h4>
+              <div class="klook-prices">
           `;
           for (var j = 0; j < pack.prices.length; j++) {
             var packPrice = pack.prices[j];
             packages += `
               <div class="package-detail-prices" data-price="${packPrice.price}">
+                <p>Name: ${packPrice.name}</p>
                 <p>Market Price: <strong style="font-size:16px">${parseInt(parseFloat(packPrice.market_price) * exchangeRate)}</strong> VND ( ${packPrice.market_price} USD)</p>
                 <p>Price: <strong style="font-size:16px">${parseInt(parseFloat(packPrice.price) * exchangeRate)}</strong> VND ( ${packPrice.price} USD)</p>
-                <p>Name Package: ${packPrice.name}</p>
                 <input type="number" name="commssion_rate" placeholder="Commission Rate" class="commission-rate" />
-                <p>Total: <strong style="font-size:16px"><span class="total-price"><span></strong>VND</p>
+                <p>Total: <strong style="font-size:16px"><span class="total-price"><span></strong> VND</p>
               </div>
               <hr/>
             `;
           }
 
           packages += `
+              </div>
             </div>
           `;
         }
@@ -67,6 +69,10 @@ function getUrlParameter(sParam) {
         var price = jQuery(this).data('price');
         var val = jQuery(this).find('input.commission-rate').val();
         jQuery(this).find('.total-price').html(parseInt(parseFloat(val) + (parseFloat(price) * exchangeRate)));
+      });
+
+      jQuery('button.btn-show').on('click', function() {
+        jQuery(this).parents('div.klook-package').find('div.klook-prices').toggle();
       });
     }
   }

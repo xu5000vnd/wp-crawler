@@ -40,7 +40,7 @@ function crawler_klook_setting() {
   register_setting('exchange_rate_vnd','exchange_rate_vnd');
 
   //add_settings_section($id, $title, $callback, $page)
-  add_settings_section('klook_show_data_section', 'Show Prices','handle_klook_show_data', 'klook_show_data_page');
+  add_settings_section('klook_show_data_section', '','handle_klook_show_data', 'klook_show_data_page');
 
   // add_settings_field( $id, $title, $callback, $page, $section, $arg)
   add_settings_field('klook_show_name','Name', 'klook_show_data_load_js','klook_show_data_page', 'klook_show_data_section', array('name'=>'name') );
@@ -72,4 +72,13 @@ function klook_show_data_load_js($args) {
     default:
       break;
   }
+}
+
+add_action( 'add_meta_boxes', 'add_meta_box_crawl');
+function add_meta_box_crawl() {
+  add_meta_box( 'singbui-crawl-data', 'Klook Price', 'singbuiCrawlSection', 'product', 'normal', 'high' );
+}
+
+function singbuiCrawlSection() {
+  do_settings_sections('klook_show_data_page');
 }
